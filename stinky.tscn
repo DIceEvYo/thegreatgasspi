@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvith2v15oa4m"]
+
+[ext_resource type="Script" path="res://Toot.gd" id="1_472d5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_472d5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 31.0
+offset_top = 37.0
+offset_right = 71.0
+offset_bottom = 77.0
+scale = Vector2(14.4304, 3.53686)
+fit_content = true
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
