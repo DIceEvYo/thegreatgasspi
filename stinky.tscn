@@ -1,23 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvith2v15oa4m"]
+[gd_scene load_steps=4 format=3 uid="uid://dvith2v15oa4m"]
 
 [ext_resource type="Script" path="res://Toot.gd" id="1_472d5"]
+[ext_resource type="Texture2D" uid="uid://dqkem34488k4v" path="res://assests/background2.png" id="2_rndl8"]
+[ext_resource type="FontFile" uid="uid://ui6uy1d0o60u" path="res://assests/Pixel.ttf" id="3_6vw6g"]
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_472d5")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-texture_filter = 1
-offset_left = 31.0
-offset_top = 37.0
-offset_right = 71.0
-offset_bottom = 77.0
-scale = Vector2(14.4304, 3.53686)
-fit_content = true
-scroll_active = false
-
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
 one_shot = true
 autostart = true
 
 [node name="STUPIDPOOPOOBLASTER" type="AudioStreamPlayer" parent="."]
+volume_db = 15.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(120, 67.5)
+texture = ExtResource("2_rndl8")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 172.42
+offset_top = 57.915
+offset_right = 228.42
+offset_bottom = 80.915
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("3_6vw6g")
+text = "200.1"

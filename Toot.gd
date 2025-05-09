@@ -33,7 +33,7 @@ func _input(event):
 			
 func _process(delta):
 	if($Timer.time_left > 0):
-		$RichTextLabel.text = str($Timer.time_left)
+		$Label.text = str(snapped($Timer.time_left, 0.1))
 	else:
 		game_over = true
 		$RichTextLabel.text = "@#FQR#$ THE GAME IS OVER wfhurgbw$#$QTY$$Q"
