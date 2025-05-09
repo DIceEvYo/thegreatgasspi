@@ -1,19 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvith2v15oa4m"]
+[gd_scene load_steps=5 format=3 uid="uid://dvith2v15oa4m"]
 
 [ext_resource type="Script" path="res://Toot.gd" id="1_472d5"]
 [ext_resource type="Texture2D" uid="uid://dqkem34488k4v" path="res://assests/background2.png" id="2_rndl8"]
 [ext_resource type="FontFile" uid="uid://ui6uy1d0o60u" path="res://assests/Pixel.ttf" id="3_6vw6g"]
+[ext_resource type="PackedScene" uid="uid://bygobw5sieayw" path="res://farticles.tscn" id="4_k64ca"]
 
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_472d5")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
 one_shot = true
 autostart = true
 
 [node name="STUPIDPOOPOOBLASTER" type="AudioStreamPlayer" parent="."]
-volume_db = 15.0
+volume_db = 8.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(120, 67.5)
@@ -33,3 +35,8 @@ grow_vertical = 2
 scale = Vector2(0.7, 0.7)
 theme_override_fonts/font = ExtResource("3_6vw6g")
 text = "200.1"
+
+[node name="Farticles" parent="." instance=ExtResource("4_k64ca")]
+position = Vector2(81, 104)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
