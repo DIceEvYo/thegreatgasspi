@@ -92,6 +92,7 @@ func _on_timer_timeout():
 	$STUPIDPOOPOOBLASTER.play()
 	$Farticles.emitting = true
 	await $STUPIDPOOPOOBLASTER.finished
+	$MOMGETTHECAMERA.play()
 	$Panel.visible = true
 	$Panel/LabelGameover.text = "@#FQR#$\bTHE GAME IS OVER\nwfhurgbw$#$QTY$$Q\n" + "Score: " + str(round(time))
 	$Farticles.emitting = false

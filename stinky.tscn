@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dvith2v15oa4m"]
+[gd_scene load_steps=10 format=3 uid="uid://dvith2v15oa4m"]
 
 [ext_resource type="Script" path="res://Toot.gd" id="1_472d5"]
 [ext_resource type="Texture2D" uid="uid://dqkem34488k4v" path="res://assests/background2.png" id="2_rndl8"]
 [ext_resource type="FontFile" uid="uid://ui6uy1d0o60u" path="res://assests/Pixel.ttf" id="3_6vw6g"]
 [ext_resource type="PackedScene" uid="uid://bygobw5sieayw" path="res://farticles.tscn" id="4_k64ca"]
 [ext_resource type="PackedScene" uid="uid://2uexyxj3yj7o" path="res://farticles_quick.tscn" id="4_mxjui"]
+[ext_resource type="AudioStream" uid="uid://cm2jf162n70d1" path="res://assests/liveReaction/wow.mp3" id="6_g4bio"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oc8l4"]
 bg_color = Color(0, 0, 0, 1)
@@ -59,11 +60,12 @@ position = Vector2(81, 104)
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
-offset_right = 173.0
+offset_right = 241.0
 offset_bottom = 53.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_oc8l4")
 
 [node name="LabelGameover" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 3.0
 offset_right = 239.0
@@ -90,6 +92,8 @@ text = "Restart"
 wait_time = 2.0
 one_shot = true
 
+[node name="MOMGETTHECAMERA" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_g4bio")
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Panel/Restart" to="." method="_on_restart_pressed"]
 [connection signal="timeout" from="QuickFart" to="." method="_on_quick_fart_timeout"]
