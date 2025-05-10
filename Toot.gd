@@ -97,6 +97,10 @@ func _on_timer_timeout():
 	$REEEEEEEEEEEEEEEEE.stop()
 	$CherrySpriteCranberry.visible = true
 	$MOMGETTHECAMERA.play()
+	var anim = create_tween()
+	anim.tween_property($left_door, "position", Vector2($left_door.position.x + -50, $left_door.position.y), 6)
+	anim.parallel()
+	anim.tween_property($right_door, "position", Vector2($right_door.position.x + 50, $right_door.position.y), 6)
 	await $MOMGETTHECAMERA.finished
 	$TWENTYMILLIONAUDIOPLAYRSLATER.play()
 	$Panel.visible = true
