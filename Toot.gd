@@ -91,11 +91,17 @@ func _on_timer_timeout():
 	$STUPIDPOOPOOBLASTER.stream = all_exclusive_inclusive_wonderfully_poopsclusive_farttastical_limited_eddition_fart_gatcha[lucky_stinky_pooPoo]
 	$STUPIDPOOPOOBLASTER.play()
 	$Farticles.emitting = true
+	$BOOMBOOMINMYTOMBTOMB.stop()
 	await $STUPIDPOOPOOBLASTER.finished
+	$Farticles.emitting = false
+	$REEEEEEEEEEEEEEEEE.stop()
+	$CherrySpriteCranberry.visible = true
 	$MOMGETTHECAMERA.play()
+	await $MOMGETTHECAMERA.finished
+	$TWENTYMILLIONAUDIOPLAYRSLATER.play()
 	$Panel.visible = true
 	$Panel/LabelGameover.text = "@#FQR#$\bTHE GAME IS OVER\nwfhurgbw$#$QTY$$Q\n" + "Score: " + str(round(time))
-	$Farticles.emitting = false
+	
 
 
 func _on_quick_fart_timeout():
