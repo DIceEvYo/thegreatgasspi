@@ -94,7 +94,6 @@ one_shot = true
 
 [node name="MOMGETTHECAMERA" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_g4bio")
-
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Panel/Restart" to="." method="_on_restart_pressed"]
 [connection signal="timeout" from="QuickFart" to="." method="_on_quick_fart_timeout"]
